@@ -187,13 +187,13 @@ def transition_to_gameplay():
     if "background" in player_data["equipped"]:
         background = player_data["equipped"]["background"]
         if background == "galaxy":
-            background_image = load_and_scale_background("Sprites/Galaxy_background.png", window_width, window_height)
+            background_image = load_and_scale_background("sprites/Galaxy_background.png", window_width, window_height)
         elif background == "rainbow":
-            background_image = load_and_scale_background("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\Rainbow_background.png", window_width, window_height)
+            background_image = load_and_scale_background("sprites/Rainbow_background.png", window_width, window_height)
         elif background == "food_rain":
-            background_image = load_and_scale_background("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\food_rain_background.png", window_width, window_height)
+            background_image = load_and_scale_background("sprites/food_rain_background.png", window_width, window_height)
         elif background == "poop":
-            background_image = load_and_scale_background("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\poop_background.png", window_width, window_height)
+            background_image = load_and_scale_background("sprites/poop_background.png", window_width, window_height)
         
         if background_image:
             screen.blit(background_image, (0, 0))
@@ -311,13 +311,13 @@ for achievement in achievements:
     achievement["unlocked"] = player_data["achievements"].get(achievement_name, False)
 
 # Load Casper's sprites
-neutral_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\Casper_sprite.png")
-angry_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\angry_casper.png")
+neutral_sprite = pygame.image.load("sprites/Casper_sprite.png")
+angry_sprite = pygame.image.load("sprites/angry_casper.png")
 neutral_sprite = pygame.transform.scale(neutral_sprite, (600, 600))  # Resizing sprites
 angry_sprite = pygame.transform.scale(angry_sprite, (600, 600))
 
 # Load the speech bubble sprite
-speech_bubble_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\speech_bubble.png")
+speech_bubble_sprite = pygame.image.load("sprites/speech_bubble.png")
 speech_bubble_sprite = pygame.transform.scale(speech_bubble_sprite, (450, 225))  # Resize to make it bigger
 
 current_sprite = neutral_sprite  # Set the initial sprite
@@ -435,15 +435,15 @@ while running:
                                     screen.fill((0, 0, 0))  # Black
                                     print("Background set to black")  # Debug print statement
                                 elif player_data["equipped"]["background"] == "galaxy":
-                                    background_image = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\Galaxy_background.png")
+                                    background_image = pygame.image.load("sprites/Galaxy_background.png")
                                     screen.blit(pygame.transform.scale(background_image, (window_width, window_height)), (0, 0))
                                     print("Background set to galaxy")  # Debug print statement
                                 elif player_data["equipped"]["background"] == "rainbow":
-                                    background_image = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\Rainbow_background.png")
+                                    background_image = pygame.image.load("sprites/Rainbow_background.png")
                                     screen.blit(pygame.transform.scale(background_image, (window_width, window_height)), (0, 0))
                                     print("Background set to rainbow")  # Debug print statement
                                 elif player_data["equipped"]["background"] == "food_rain":
-                                    background_image = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\food_rain_background.png")
+                                    background_image = pygame.image.load("sprites/food_rain_background.png")
                                     screen.blit(pygame.transform.scale(background_image, (window_width, window_height)), (0, 0))
                                     print("Background set to food rain")  # Debug print statement
                                 elif player_data["equipped"]["background"] == "brown":
@@ -453,7 +453,7 @@ while running:
                                     screen.fill((0, 100, 0))  # Dark Green
                                     print("Background set to dark green")  # Debug print statement
                                 elif player_data["equipped"]["background"] == "poop":
-                                    background_image = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\poop_background.png")
+                                    background_image = pygame.image.load("sprites/poop_background.png")
                                     screen.blit(pygame.transform.scale(background_image, (window_width, window_height)), (0, 0))
                                     print("Background set to poop")  # Debug print statement
                                 else:
@@ -466,13 +466,13 @@ while running:
                         default_sprite_size = (600, 600)
                         if "sprite" in player_data["equipped"]:
                             if player_data["equipped"]["sprite"] == "party_hat":
-                                current_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\party_casper.png")
+                                current_sprite = pygame.image.load("sprites/party_casper.png")
                                 current_sprite = pygame.transform.scale(current_sprite, default_sprite_size)  # Resize sprite
                             elif player_data["equipped"]["sprite"] == "cat_ears":
-                                current_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\cat_casper.png")
+                                current_sprite = pygame.image.load("sprites/cat_casper.png")
                                 current_sprite = pygame.transform.scale(current_sprite, default_sprite_size)  # Resize sprite
                             elif player_data["equipped"]["sprite"] == "caspers_gf":
-                                current_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\caspers_gf.png")
+                                current_sprite = pygame.image.load("sprites/caspers_gf.png")
                                 current_sprite = pygame.transform.scale(current_sprite, default_sprite_size)  # Resize sprite
                             else:
                                 current_sprite = pygame.transform.scale(neutral_sprite, default_sprite_size)  # Ensure default sprite is resized as well
@@ -663,13 +663,13 @@ while running:
         background_image = None
         if "background" in player_data["equipped"]:
             if player_data["equipped"]["background"] == "galaxy":
-                background_image = load_and_scale_background("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\Galaxy_background.png", window_width, window_height)
+                background_image = load_and_scale_background("sprites/Galaxy_background.png", window_width, window_height)
             elif player_data["equipped"]["background"] == "rainbow":
-                background_image = load_and_scale_background("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\Rainbow_background.png", window_width, window_height)
+                background_image = load_and_scale_background("sprites/Rainbow_background.png", window_width, window_height)
             elif player_data["equipped"]["background"] == "food_rain":
-                background_image = load_and_scale_background("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\food_rain_background.png", window_width, window_height)
+                background_image = load_and_scale_background("sprites/food_rain_background.png", window_width, window_height)
             elif player_data["equipped"]["background"] == "poop":
-                background_image = load_and_scale_background("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\poop_background.png", window_width, window_height)
+                background_image = load_and_scale_background("sprites/poop_background.png", window_width, window_height)
 
             if background_image:
                 screen.blit(background_image, (0, 0))
@@ -757,7 +757,7 @@ while running:
         row_y = 100 + scroll_offset  # Apply scroll offset
         for achievement in achievements:
             # Padlock sprite (made smaller and moved to the left)
-            padlock_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\locked_padlock.png" if not achievement["unlocked"] else "C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\unlocked_padlock.png")
+            padlock_sprite = pygame.image.load("sprites/locked_padlock.png" if not achievement["unlocked"] else "sprites/unlocked_padlock.png")
             padlock_sprite = pygame.transform.scale(padlock_sprite, (30, 30))  # Resize padlock sprite
             padlock_rect = padlock_sprite.get_rect(topleft=(20, row_y + 15))
             achievements_surface.blit(padlock_sprite, padlock_rect)
@@ -806,15 +806,15 @@ while running:
                 reward_rect = pygame.Rect(820, row_y, 60, 60)
                 pygame.draw.rect(achievements_surface, reward_color, reward_rect)
             elif achievement["reward"] == "galaxy":
-                reward_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\Galaxy_background.png")
+                reward_sprite = pygame.image.load("sprites/Galaxy_background.png")
                 reward_sprite = pygame.transform.scale(reward_sprite, (60, 60))  # Resize galaxy sprite
                 achievements_surface.blit(reward_sprite, (820, row_y))
             elif achievement["reward"] == "rainbow":
-                reward_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\Rainbow_background.png")
+                reward_sprite = pygame.image.load("sprites/Rainbow_background.png")
                 reward_sprite = pygame.transform.scale(reward_sprite, (60, 60))  # Resize rainbow sprite
                 achievements_surface.blit(reward_sprite, (820, row_y))
             elif achievement["reward"] == "food_rain":
-                reward_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\food_rain_background.png")
+                reward_sprite = pygame.image.load("sprites/food_rain_background.png")
                 reward_sprite = pygame.transform.scale(reward_sprite, (60, 60))  # Resize food rain sprite
                 achievements_surface.blit(reward_sprite, (820, row_y))
             elif achievement["reward"] == "brown":
@@ -826,19 +826,19 @@ while running:
                 reward_rect = pygame.Rect(820, row_y, 60, 60)
                 pygame.draw.rect(achievements_surface, reward_color, reward_rect)
             elif achievement["reward"] == "poop":
-                reward_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\poop_background.png")
+                reward_sprite = pygame.image.load("sprites/poop_background.png")
                 reward_sprite = pygame.transform.scale(reward_sprite, (60, 60))  # Resize poop sprite
                 achievements_surface.blit(reward_sprite, (820, row_y))
             elif achievement["reward"] == "party_hat":
-                reward_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\party_casper.png")
+                reward_sprite = pygame.image.load("sprites/party_casper.png")
                 reward_sprite = pygame.transform.scale(reward_sprite, (60, 60))  # Resize party hat sprite
                 achievements_surface.blit(reward_sprite, (820, row_y))
             elif achievement["reward"] == "cat_ears":
-                reward_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\cat_casper.png")
+                reward_sprite = pygame.image.load("sprites/cat_casper.png")
                 reward_sprite = pygame.transform.scale(reward_sprite, (60, 60))  # Resize cat ears sprite
                 achievements_surface.blit(reward_sprite, (820, row_y))
             elif achievement["reward"] == "caspers_gf":
-                reward_sprite = pygame.image.load("C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\question_mark.png" if not achievement["unlocked"] else "C:\\Users\\hatem\\OneDrive\\Desktop\\Sprites\\caspers_gf.png")
+                reward_sprite = pygame.image.load("sprites/question_mark.png" if not achievement["unlocked"] else "sprites/caspers_gf.png")
                 reward_sprite = pygame.transform.scale(reward_sprite, (60, 60))  # Resize sprite
                 achievements_surface.blit(reward_sprite, (820, row_y))
 
