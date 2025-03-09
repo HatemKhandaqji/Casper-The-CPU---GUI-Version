@@ -1,1 +1,31 @@
-{"high_score": 1, "correct_consecutive_guesses": 0, "total_correct_guesses": 2, "incorrect_guesses": 6, "caspers_sprite_taps": 4, "equipped": {}, "achievements": {"First Day on the Job": true, "Third Time's the Charm!": false, "The Big 5": false, "Lucky Number": false, "The Impossible": false, "The Start": false, "Hobbyist": false, "Expert Guesser": false, "Bad Start": true, "Going Lower": false, "Bottom of the Barrel": false, "Avid Collector": false, "Who's a good boy?": false, "Master Guesser": false}}
+{
+    "equipped": {
+        "sprite": "cat_ears",
+        "background": "light_pink"
+    },
+    "achievements": {
+        "First Day on the Job": true,
+        "Third Time's the Charm!": false,
+        "The Big 5": false,
+        "Lucky Number": false,
+        "The Impossible": false,
+        "The Start": false,
+        "Hobbyist": false,
+        "Expert Guesser": false,
+        "Bad Start": true,
+        "Going Lower": false,
+        "Bottom of the Barrel": false,
+        "Avid Collector": false,
+        "Who's a good boy?": true,
+        "Master Guesser": false
+    },
+    "statistics": {
+        "score": 1,
+        "high_score": 1,
+        "correct_consecutive_guesses": 1,
+        "total_correct_guesses": 1,
+        "total_incorrect_guesses": 22,
+        "caspers_sprite_taps": 63,
+        "all_backgrounds_collected": false
+    }
+}
