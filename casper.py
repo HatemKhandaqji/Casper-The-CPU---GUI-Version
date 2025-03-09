@@ -301,7 +301,11 @@ except (FileNotFoundError, json.JSONDecodeError):
     caspers_sprite_taps = 0  # Initialize sprite taps
     player_data = {
         "equipped": {},  # Initialize equipped rewards
-        "achievements": {achievement["name"]: False for achievement in achievements}
+        "achievements": {achievement["name"]: False for achievement in achievements},
+        "correct_consecutive_guesses": 0,
+        "total_correct_guesses": 0,
+        "incorrect_guesses": 0,
+        "caspers_sprite_taps": 0,
     }
     
 
